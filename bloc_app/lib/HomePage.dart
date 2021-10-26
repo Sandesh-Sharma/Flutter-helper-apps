@@ -20,7 +20,10 @@ class _HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("EmployeeApp"),
+        title: Text("Company Management App"),
+        actions: <widget>[
+          IconButton(
+            icon : const Icon(Icons.add_alert),)]
       ),
       body: Container(
         child: StreamBuilder<List<Employee>>(
