@@ -7,7 +7,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
+      title: 'Flutter Sqflite App',
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
@@ -35,7 +35,7 @@ class _MyHomePageState extends State<MyHomePage> {
     double width = MediaQuery.of(context).size.width;
     return Scaffold(
       appBar: AppBar(
-        title: Text('Sqlite Demo'),
+        title: Text('Sqflite app'),
       ),
       body: ListView(
         children: <Widget>[
@@ -49,15 +49,15 @@ class _MyHomePageState extends State<MyHomePage> {
                     decoration: new InputDecoration(labelText: 'Name'),
                     controller: _nameController,
                     validator: (val) =>
-                        val.isNotEmpty ? null : 'Name Should Not Be empty',
+                        val.isNotEmpty ? null : 'Name field cannot be empty',
                   ),
                   TextFormField(
                     decoration: new InputDecoration(labelText: 'Course'),
                     controller: _courseController,
                     validator: (val) =>
-                        val.isNotEmpty ? null : 'Course Should Not Be empty',
+                        val.isNotEmpty ? null : 'Course field cannot be empty',
                   ),
-                  RaisedButton(
+                  ElevatedButton(
                     textColor: Colors.white,
                     color: Colors.blueAccent,
                     child: Container(
