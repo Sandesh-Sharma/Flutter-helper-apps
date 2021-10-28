@@ -2,6 +2,7 @@ import 'dart:async';
 import 'package:flutter/foundation.dart';
 import 'package:path/path.dart';
 import 'package:sqflite/sqflite.dart';
+import 'studentClass.dart'
 
 class DbStudentManager {
   Database _database;
@@ -40,15 +41,5 @@ class DbStudentManager {
   Future<void> deleteStudent(int id) async {
     await openDb();
     await _database.delete('student', where: "id = ?", whereArgs: [id]);
-  }
-}
-
-class Student {
-  int id;
-  String name;
-  String course;
-  Student({@required this.name, @required this.course, this.id});
-  Map<String, dynamic> toMap() {
-    return {'name': name, 'course': course};
   }
 }
